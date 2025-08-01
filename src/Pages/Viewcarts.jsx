@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Component/Navbar";
 import Viewcart from "../Component/Viewcart";
 import Footer from "../Component/Footer";
+import Tickanimation from '../Component/Tickanimation'
+import '../style.css'
 
 const Viewcarts = () => {
+
+  const[toggle,setToggle]=useState(false)
+
   return (
     <div>
       <Navbar />
@@ -26,9 +31,11 @@ const Viewcarts = () => {
           overflow:'scroll'
         }}
       >
-        <Viewcart />
+        {toggle ? <Tickanimation/>:<Viewcart/> }
 
-        <button style={{position:"fixed",bottom:'100px',left:"300px"}}>Check out</button>
+        
+
+        <button style={{position:"fixed",bottom:'100px',left:"300px"}} className="place-button" onClick={()=>setToggle((cur)=>!cur)}>Check out</button>
       </div>
       <Footer />
     </div>

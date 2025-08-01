@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { myContext } from "../App";
+import '../style.css'
 
 const cardContainerStyle = {
   display: "flex",
@@ -39,6 +40,8 @@ const userProduct = () => {
 
   const [products, setProducts] = useState([]);
 
+  const [btn,setBtn]=useState(false)
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
@@ -57,8 +60,10 @@ const userProduct = () => {
             image: cur.image,
           },
         ]);
+        cur.active=true
       }
     });
+    setBtn((btn)=>!btn)
   }
 
   return (
@@ -70,8 +75,8 @@ const userProduct = () => {
             <h3>{cur.title}</h3>
             <h5>{cur.price}</h5>
             <h5>{cur.category}</h5>
-            <button style={buttonStyle} onClick={() => addingCart(cur.id)}>
-              Add to cart
+            <button  value={cur.active} onClick={() => addingCart(cur.id)}>
+                {cur.active  ? <p>Added</p> : <p>Add to cart</p>}
             </button>
           </div>
         );

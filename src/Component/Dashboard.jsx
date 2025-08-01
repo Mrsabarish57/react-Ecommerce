@@ -5,11 +5,12 @@ import SearchBar from './searchBar'
 import { FaOpencart } from "react-icons/fa6";
 import Userproduct from './userProduct'
 import { BsCart3 } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 
 const Dashboard = () => {
 
- 
+ const navi=useNavigate()
 
   return (
     <div>
@@ -24,7 +25,7 @@ const Dashboard = () => {
             <SearchBar/>
           </div>
           <div style={{backgroundColor:'#007bffff',padding:'5px',borderRadius:'5px'}}>
-             <FaOpencart/>
+             <FaOpencart onClick={()=>navi('/Viewcarts')}/>
           </div>
         </div>
         {/* main content */}

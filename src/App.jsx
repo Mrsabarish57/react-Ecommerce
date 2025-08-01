@@ -8,13 +8,19 @@ import Contact from "./Pages/Contact";
 import { createContext, useState } from "react";
 import './style.css'
 
+import Viewcarts from "./Pages/Viewcarts";
+import AdminDashboard from "./Pages/AdminDashboard";
+
 export const myContext=createContext()
 
 const App = () => {
   const[user,setUser]=useState([])
+
+  const[addcart,setAddcart]=useState([])
+
   return (
   <div id="main-container">
-     <myContext.Provider value={{user,setUser}}>
+     <myContext.Provider value={{user,setUser,addcart,setAddcart}}>
      <Router>
       <Routes>
         <Route path="/" element={<Login />} />
@@ -23,6 +29,8 @@ const App = () => {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Setting" element={<Setting />} />
+        <Route path="/Viewcarts" element={<Viewcarts/>} />
+        <Route path="/AdminDashboard" element={<AdminDashboard/>} />
       </Routes>
     </Router>
    </myContext.Provider>

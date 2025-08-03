@@ -4,6 +4,7 @@ import Viewcart from "../Component/Viewcart";
 import Footer from "../Component/Footer";
 import Tickanimation from '../Component/Tickanimation'
 import '../style.css'
+import Checkoutform from "../Component/Checkoutform";
 
 const Viewcarts = () => {
 
@@ -31,11 +32,11 @@ const Viewcarts = () => {
           overflow:'scroll'
         }}
       >
-        {toggle ? <Tickanimation/>:<Viewcart/> }
+        {toggle ? <Checkoutform/>:<Viewcart/> }
 
         
 
-        <button style={{position:"fixed",bottom:'100px',left:"300px"}} className="place-button" onClick={()=>setToggle((cur)=>!cur)}>Check out</button>
+        {!toggle && <button style={{position:"fixed",bottom:'100px',left:"300px"}} className="place-button" onClick={()=>setToggle((cur)=>!cur)}>Check out</button>}
       </div>
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { myContext } from "../App";
-import '../style.css'
+import "../style.css";
 
 const cardContainerStyle = {
   display: "flex",
@@ -40,7 +40,7 @@ const userProduct = () => {
 
   const [products, setProducts] = useState([]);
 
-  const [btn,setBtn]=useState(false)
+  const [btn, setBtn] = useState(false);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -54,29 +54,31 @@ const userProduct = () => {
         cartval.setAddcart((c) => [
           ...c,
           {
+            id:cur.id,
             title: cur.title,
             price: cur.price,
-            category: cur.category,
             image: cur.image,
+            category: cur.category,
           },
         ]);
-        cur.active=true
+
+        cur.active = true;
       }
     });
-    setBtn((btn)=>!btn)
+    setBtn((btn) => !btn);
   }
 
   return (
     <div style={cardContainerStyle}>
-      {products.map((cur,i) => {
+      {products.map((cur, i) => {
         return (
           <div style={cardStyle} key={i}>
             <img src={cur.image} alt={cur.image} style={imageStyle} />
             <h3>{cur.title}</h3>
             <h5>{cur.price}</h5>
             <h5>{cur.category}</h5>
-            <button  value={cur.active} onClick={() => addingCart(cur.id)}>
-                {cur.active  ? <p>Added</p> : <p>Add to cart</p>}
+            <button value={cur.active} onClick={() => addingCart(cur.id)}>
+              {cur.active ? <p>Added</p> : <p>Add to cart</p>}
             </button>
           </div>
         );

@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import '../style.css'
 
 const OrderConfirmation = () => {
-  const [showTick, setShowTick] = useState(false);
-
-  const handlePlaceOrder = () => {
-    setShowTick(true);
-  };
+  
 
   return (
     <div className="order-container">

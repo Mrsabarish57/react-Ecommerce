@@ -25,7 +25,7 @@ const App = () => {
   return (
   <div id="main-container">
      <myContext.Provider value={{user,setUser,addcart,setAddcart,checkdet,setCheckdet,products, setProducts}}>
-     <Router>
+    
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
@@ -36,7 +36,6 @@ const App = () => {
         <Route path="/Viewcarts" element={<Viewcarts/>} />
         <Route path="/AdminDashboard" element={<AdminDashboard/>} />
       </Routes>
-    </Router>
    </myContext.Provider>
   </div>
   );

@@ -16,7 +16,7 @@ const Login = () => {
 
     let found = false;
 
-    if(usref.current.value === "admin123" && passref.current.value === "admin@123"){
+    if(usref.current.value === "Saba123" && passref.current.value === "Saba@123"){
       navi('/AdminDashboard')
       found = true
     }

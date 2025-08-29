@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Aboutdashboard = () => {
+  const navigate=useNavigate()
   return (
     <div
       style={{
@@ -56,15 +58,15 @@ const Aboutdashboard = () => {
         style={{
           marginTop: '40px',
           padding: '10px',
-          backgroundColor: '#007bff',
-          color: '#fff',
+          backgroundColor: '#050202ff',
+         
           borderRadius: '5px',
           cursor: 'pointer',
           display: 'inline-block',
         }}
       >
         <a
-          href="/contact"
+          href="/Contact"
           style={{
             textDecoration: 'none',
             color: '#fff',

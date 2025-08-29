@@ -20,9 +20,11 @@ const App = () => {
 
   const[checkdet,setCheckdet]=useState([])
 
+    const [products, setProducts] = useState([]);
+
   return (
   <div id="main-container">
-     <myContext.Provider value={{user,setUser,addcart,setAddcart,checkdet,setCheckdet}}>
+     <myContext.Provider value={{user,setUser,addcart,setAddcart,checkdet,setCheckdet,products, setProducts}}>
      <Router>
       <Routes>
         <Route path="/" element={<Login />} />

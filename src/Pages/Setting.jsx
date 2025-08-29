@@ -9,7 +9,7 @@ const Setting = () => {
     <div>
         <Navbar/>
         <Settingdashboard/>
-        <AdminDashboard/>
+       
         <Footer/>
     </div>
   )

@@ -32,7 +32,10 @@ const Viewcarts = () => {
           overflow:'scroll'
         }}
       >
-        {toggle ? <Checkoutform/>:<Viewcart/> }
+      
+      <div >
+          {toggle ? <Checkoutform/>:<Viewcart/> }
+      </div>
 
         
 

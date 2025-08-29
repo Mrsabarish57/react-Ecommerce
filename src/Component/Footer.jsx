@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   const footerStyle = {
-    backgroundColor: '#007bff',
+    backgroundColor: '#0a1521ff',
     color: 'white',
     textAlign: 'center',
     padding: '15px 0',
@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <div style={footerStyle}>
-      © 2025 Kevin Ecommerce. All rights reserved.
+      © 2025 Fashloop. All rights reserved.
     </div>
   );
 };

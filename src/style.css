@@ -1,23 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 #main-container{
-     font-family: "Lato", sans-serif;
+     font-family: Verdana, Tahoma, sans-serif sans-serif;
   font-weight: 100;
   font-style: normal;
+  background-color: honeydew;
+    
+}
+
+#btn-1{
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #121a23;
+  color: rgb(192, 24, 24);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 
 
+#btn-1:hover{
+   margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #65acf8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
 
-
-button[value="true"]{
-  margin-top: "10px";
-  padding: "8px 12px";
+button[value="false"]{
+  margin-top: 10px;
+  padding: 8px 12px;
   background-color: #007bff;
-  color: "white";
-  border: "none";
-  border-radius: "4px";
-  cursor: "pointer";
+  color: rgb(164, 157, 157);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .order-container {
@@ -29,8 +50,8 @@ button[value="true"]{
 .place-button {
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #93b7dd;
+  color: #b7b7b7;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -108,4 +129,5 @@ button[value="true"]{
     transform: scale(1.1);
   }
 }
+
 

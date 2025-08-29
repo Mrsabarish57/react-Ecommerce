@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   // ✅ Inline Styles
   const navStyle = {
-    backgroundColor: '#007bff', // blue background
+    backgroundColor: '#091727ff', // blue background
     padding: '15px 30px',
     display: 'flex',
     justifyContent: 'space-between',
@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div style={navStyle}>
-      <h1 style={titleStyle}>Kevin Ecommerce</h1>
+      <h1 style={titleStyle}>Fashloop</h1>
       <ul style={ulStyle}>
         <li><Link to='/Home' style={linkStyle}>Home</Link></li>
         <li><Link to='/About' style={linkStyle}>About</Link></li>

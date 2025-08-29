@@ -7,7 +7,7 @@ const cardContainerStyle = {
   gap: "20px",
   flexWrap: "wrap",
   justifyContent: "center",
-  padding: "20px",
+  padding: "5px",
 };
 
 const cardStyle = {
@@ -15,6 +15,7 @@ const cardStyle = {
   border: "1px solid #ccc",
   borderRadius: "8px",
   width: "200px",
+  
   padding: "15px",
   textAlign: "center",
   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
@@ -22,7 +23,9 @@ const cardStyle = {
 
 const imageStyle = {
   width: "100%",
+  height:'200px',
   borderRadius: "6px",
+  
 };
 
 const buttonStyle = {
@@ -77,7 +80,7 @@ const userProduct = () => {
             <h3>{cur.title}</h3>
             <h5>{cur.price}</h5>
             <h5>{cur.category}</h5>
-            <button value={cur.active} onClick={() => addingCart(cur.id)}>
+            <button id="btn-1" value={cur.active} onClick={() => addingCart(cur.id)}>
               {cur.active ? <p>Added</p> : <p>Add to cart</p>}
             </button>
           </div>
